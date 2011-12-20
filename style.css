@@ -1,0 +1,189 @@
+* {
+	padding:0;
+	border:0;
+	margin:0;
+}
+
+body {
+	background:#FFF;
+}
+
+#game {
+	position:relative;
+	width:700px;
+	height:500px;
+	float:left;
+}
+
+#juego {
+	position:absolute;
+	border:5px solid #CCC;
+	background:#FFF;
+	z-index:0;
+}
+
+
+@-webkit-keyframes pulse {
+  from {
+    opacity: 0.0;
+    font-size: 100%;
+  }
+  to {
+    opacity: 1.0;
+    font-size: 200%;
+  }
+}
+
+@-webkit-keyframes hide {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    opacity: 0.0;
+  }
+}
+
+#loading {
+	position:absolute;
+	width:700px;
+	height:500px;
+	font-family:Arial;
+	line-height:500px;
+	text-align:center;
+	z-index:1;
+  	-webkit-animation-name: pulse;
+  	-webkit-animation-duration: 2s;
+  	-webkit-animation-iteration-count: infinite;
+  	-webkit-animation-timing-function: ease-in-out;
+  	-webkit-animation-direction: alternate;
+}
+
+#juego {
+	position:absolute;
+	border:5px solid #CCC;
+	background:#FFF;
+	z-index:0;
+}
+
+#menu {
+	position:absolute;
+	width:710px;
+	height:510px;
+	background:#363;
+	font:15px Arial;
+	z-index:1;
+	display:none;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;	
+	transition: opacity 1s ease-in-out;
+}
+
+#menu.hide{
+	opacity:0;
+	display:none;
+}
+
+#menu #logo {
+	font:100px "Nova Square";
+	color:#FFF;
+	font-weight:bold;
+	text-shadow:3px 3px 2px #030;
+	text-align:center;
+	margin-top:50px;
+	width:inherit;
+	height:150px;
+}
+
+#menu #options{
+	width:inherit;
+	margin-top:50px;
+	text-align:center;
+	background:transparent;
+}
+
+#menu #credits{
+	width:inherit;
+	margin-top:50px;
+	text-align:center;
+	background:transparent;
+}
+
+#menu #options ul {
+	list-style:none;
+}
+
+#menu #options ul li {
+	font:30px "Nova Square";
+	text-align:center;
+	color:#FFF;
+	font-weight:bold;
+}
+
+#menu #options ul li:hover {
+	font:40px "Nova Square";
+	text-align:center;
+	color:#FFF;
+	text-shadow:3px 3px 2px #030;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+#rating-wrapper {
+	width:710px;
+	float:left;
+	margin-top:10px;
+	height:auto;
+	overflow:hidden;	
+}
+
+#rating {
+	width:2000px;
+	padding:5px;
+	height:50px;
+	background:#333;
+}
+
+#rating .player {
+	width:50px;
+	height:50px;
+	background:#FFF;
+	float:left;
+	margin-right:5px;
+	position:relative;
+}
+
+#rating .player .picture {
+	width:50px;
+	height:50px;
+	background:transparent;
+	float:left;
+}
+
+#rating .player .name {
+	font:11px "Nova Square";
+	display:block;
+	margin-top:5px;
+}
+
+#rating .player .points {
+	font:15px "Nova Square";
+	font-weight:bold;
+	display:block;
+	background-color:rgba(0,0,0,0.5);
+	color:#FFF;
+	position:absolute;
+	bottom:0px;
+	right:0;
+}
+
+#footer {
+	margin-top:2px;
+	width:710px;
+	background:transparent;
+	height:50px;
+	float:left;
+	font:10px "Nova Square";
+	text-align:right;
+}

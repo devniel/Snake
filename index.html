@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Nova+Square&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+<title>Snake</title>
+<link type="text/css" rel="stylesheet" href="style.css">
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/snake.js"></script>
+<script type="text/javascript" src="js/food.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+
+<script type="text/javascript" src="js/parte.js"></script>
+<script type="text/javascript" src="js/head.js"></script>
+
+
+<script type="text/javascript">
+_lastPoints = null;	
+
+GAME = {
+	setLastPoints : function(points){
+			_lastPoints = points;
+	},
+	restart : function(){
+		//alert(":o");
+		document.getElementById("menu").className = "block";
+		document.getElementById("menu").style.display = "block";
+		if(_lastPoints != null){
+			document.getElementById("player-points").innerHTML = _lastPoints;
+		}else{
+			document.getElementById("player-points").innerHTML = 0;	
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+
+<div id="wrapper" style="position:absolute;top:50%;left:50%;margin-left:-350px;margin-top:-250px;">
+<div id="game">
+    <div id="loading">
+    Cargando ...
+    </div>
+    
+    <div id="menu">
+        <div id="logo">
+            <span id="title">War of Ebanis</span>
+        </div>
+    
+        <div id="options">
+            <ul>
+                <li id="play">Jugar</li>
+            </ul>
+        </div>
+    </div>
+    
+    <canvas id="juego" width="700" height="500">
+    </canvas>
+</div>
+
+<audio id="comer" preload="auto">
+  <source src="sound/comer.mp3" type="audio/mpeg" />
+  <source src="sound/comer.wav" type="audio/wav" />
+  Tu explorador no soporta el elemento audio de html5.
+</audio>
+
+<audio id="mover" preload="auto">
+  <source src="sound/mover.mp3" type="audio/mpeg" />
+  <source src="sound/mover.wav" type="audio/wav" />
+  Tu explorador no soporta el elemento audio de html5.
+</audio>
+
+<audio id="crash" preload="auto">
+  <source src="sound/crash.mp3" type="audio/mpeg" />
+  <source src="sound/crash.wav" type="audio/wav" />
+  Tu explorador no soporta el elemento audio de html5.
+</audio>
+
+
+<div id="footer" style="margin-top:15px">
+<div style="float:left">Puntos : <div id="player-points" style="width:100px;height:100px;float:left;"></div></div>
+ ----- Creado por el CEIDS | Universidad de Lima
+</div>
+</div>
+
+</body>
+</html>
